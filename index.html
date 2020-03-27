@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+
+</head>
+<body>
+
+  <script src="js/main.js"></script>
+  <div class="main-container">
+    <div class="main-left">
+      <div class="product-gallery">
+        <div class="product-gallery-slider  owl-product-base" data-sh-main>
+					<div class="product-gallery-slider-item">
+						<a data-index="1" onclick="event.preventDefault()" class="js-gallery-image" href="img/image1.jpeg">
+							<img src="img/image11.jpeg"/>
+						</a>
+					</div>
+          <div class="product-gallery-slider-item">
+            <a data-index="2" onclick="event.preventDefault()" class="js-gallery-image" href="img/image2.jpg">
+              <img class="lozad" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="img/image22.jpg"/>
+            </a>
+          </div>
+					<div class="product-gallery-slider-item">
+						<a data-index="3" onclick="event.preventDefault()"class="js-gallery-image" href="img/image10.jpg">
+							<img class="lozad" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="img/image10.jpg"/>
+						</a>
+					</div>
+        </div>
+      </div>
+    </div>
+    <div class="main-right">right content</div>
+  </div>
+	<div class="product__zoom js-product-zoom" style="display: none">
+		<pre id="count" class="count"></pre>
+		<button type="button" class="close js-closeModal" title="Close" style="position: fixed;right: 0;top: 0;">
+			Close
+		</button>
+		<ul>
+			<li>
+				<pre>original image size 700x700 pixels</pre>
+				<a data-index="1" class="js-zoom-link" href="img/image11.jpeg">
+					<img class="lozad"  data-src="img/image11.jpeg"/>
+				</a>
+			</li>
+			<li>
+				<pre>original image size 1728 × 2160 pixels</pre>
+				<a data-index="2" class="js-zoom-link" href="img/image2.jpg">
+					<img class="lozad"  data-src="img/image2.jpg"/>
+				</a>
+			</li>
+
+			<li>
+				<pre>original image size 3375 × 2250 pixels</pre>
+				<a data-index="3" class="js-zoom-link" href="img/image10.jpg">
+					<img class="lozad"  data-src="img/image10.jpg"/>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/magic-zoom-plus.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/lozad.js"></script>
+  <script src="js/magiczoomplus.js"></script>
+
+	<script>
+		const observer = lozad();
+		observer.observe();
+		window.addEventListener("load", function(event) {
+			console.log("All resources finished loading!");
+			document.querySelectorAll('.lozad').forEach((item)=>{observer.triggerLoad(item)})
+		});
+	</script>
+	<script>
+
+
+
+		var mzOptions = {
+			zoomMode: 'magnifier',
+			expand: 'off',
+			hint: 'always',
+			zoomWidth: 300,
+			zoomHeight: 300,
+			autostart: false,
+			lazyZoom: true,
+			zoomOn:'click'
+		};
+		var mzMobileOptions = {
+			zoomMode: 'off',
+			lazyZoom: true
+		};
+	</script>
+</body>
+</html>
